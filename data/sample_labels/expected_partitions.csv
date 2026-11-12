@@ -1,0 +1,8 @@
+partition,role,expected_status,rows_read,expected_accepted,expected_rejected
+2024-03-01,normal,SUCCEEDED,174,161,13
+2024-03-02,empty,SUCCEEDED,0,0,0
+2024-03-03,normal,SUCCEEDED,310,288,22
+2024-03-04,extra_column,SUCCEEDED,341,316,25
+2024-03-05,no_optional_columns,SUCCEEDED,306,284,22
+2024-03-06,schema_drift,FAILED,308,0,0
+2024-03-07,normal,SUCCEEDED,327,303,24

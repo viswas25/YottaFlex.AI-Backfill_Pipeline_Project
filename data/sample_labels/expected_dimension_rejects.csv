@@ -1,0 +1,5 @@
+dataset,source_line,reason_code
+customers,202,DUPLICATE_KEY
+customers,203,INVALID_FORMAT
+products,42,DUPLICATE_KEY
+products,43,INVALID_TYPE

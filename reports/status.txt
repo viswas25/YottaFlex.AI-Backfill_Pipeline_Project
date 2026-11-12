@@ -1,0 +1,13 @@
+partition    status        read  accepted  rejected   dup  late  note
+2024-03-01   SUCCEEDED      174       161        13     3     0  
+2024-03-02   SUCCEEDED        0         0         0     0     0  EMPTY_BATCH: header only, no data rows
+2024-03-03   SUCCEEDED      310       288        22     5     2  
+2024-03-04   SUCCEEDED      341       316        25     6    13  UNEXPECTED_COLUMNS ignored: ['promo_code']
+2024-03-05   SUCCEEDED      306       284        22     5     7  OPTIONAL_COLUMNS_ABSENT defaults applied: ['discount_pct', 'currency']
+2024-03-06   FAILED           0         0         0     0     0  missing required column(s) ['quantity']; unexpected column(s) ['qty']
+2024-03-07   SUCCEEDED      327       303        24     6    19  
+
+recent runs:
+  run-20261112T012754Z-20f2  PARTIAL     ok=0 failed=1 skipped=6
+  run-20261112T012754Z-7b20  SUCCEEDED   ok=2 failed=0 skipped=0
+  run-20261112T012753Z-cc79  PARTIAL     ok=6 failed=1 skipped=0

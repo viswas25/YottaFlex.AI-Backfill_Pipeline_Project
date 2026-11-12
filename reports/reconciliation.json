@@ -1,0 +1,77 @@
+[
+  {
+    "name": "partitions_loaded",
+    "passed": true,
+    "detail": "6 partition(s) loaded: ['2024-03-01', '2024-03-02', '2024-03-03', '2024-03-04', '2024-03-05', '2024-03-07']"
+  },
+  {
+    "name": "no_attempt_left_running",
+    "passed": true,
+    "detail": "0 attempt(s) still RUNNING"
+  },
+  {
+    "name": "source_rows_equal_events_plus_rejects",
+    "passed": true,
+    "detail": "every partition: source rows == accepted events + rejects"
+  },
+  {
+    "name": "primary_keys_unique",
+    "passed": true,
+    "detail": "duplicate event keys=0, duplicate fact keys=0"
+  },
+  {
+    "name": "referential_integrity",
+    "passed": true,
+    "detail": "orphan rows=0, fk violations=0"
+  },
+  {
+    "name": "fact_is_latest_event_per_order",
+    "passed": true,
+    "detail": "distinct orders in history=762, fact rows=762, stale rows=0"
+  },
+  {
+    "name": "amounts_recompute_exactly",
+    "passed": true,
+    "detail": "0 event row(s) whose gross/net do not recompute"
+  },
+  {
+    "name": "net_amount_by_currency_reconciles",
+    "passed": true,
+    "detail": "fact={'EUR': 5587124, 'GBP': 4378273, 'USD': 141317725} history_latest={'EUR': 5587124, 'GBP': 4378273, 'USD': 141317725}"
+  },
+  {
+    "name": "rejects_traceable_to_source",
+    "passed": true,
+    "detail": "110 rejects; untraceable=0; unknown reason codes=[]"
+  },
+  {
+    "name": "reject_breakdown",
+    "passed": true,
+    "detail": "{\"CONFLICTING_DUPLICATE\": 5, \"DUPLICATE_EVENT\": 20, \"FUTURE_TIMESTAMP\": 4, \"INVALID_ENUM\": 11, \"INVALID_FORMAT\": 9, \"INVALID_REFERENCE\": 8, \"INVALID_TIMESTAMP\": 5, \"INVALID_TYPE\": 13, \"MALFORMED_ROW\": 4, \"MISSING_REQUIRED\": 9, \"OUT_OF_RANGE\": 18}"
+  },
+  {
+    "name": "labels_expected_failures_not_loaded",
+    "passed": true,
+    "detail": "partitions expected to FAIL: ['2024-03-06']; wrongly loaded: []"
+  },
+  {
+    "name": "labels_accepted_events_match",
+    "passed": true,
+    "detail": "expected=1352 loaded=1352 missing=0 unexpected=0 field_mismatches=0"
+  },
+  {
+    "name": "labels_rejects_match",
+    "passed": true,
+    "detail": "expected=106 loaded=106 missing=0 unexpected=0"
+  },
+  {
+    "name": "labels_fact_orders_and_net_match",
+    "passed": true,
+    "detail": "expected orders=762 fact=762; expected net={'USD': 141317725, 'GBP': 4378273, 'EUR': 5587124} fact={'EUR': 5587124, 'GBP': 4378273, 'USD': 141317725}; status mix equal=True"
+  },
+  {
+    "name": "labels_dimension_rejects_match",
+    "passed": true,
+    "detail": "expected={('customers', 202, 'DUPLICATE_KEY'): 1, ('customers', 203, 'INVALID_FORMAT'): 1, ('products', 42, 'DUPLICATE_KEY'): 1, ('products', 43, 'INVALID_TYPE'): 1} loaded={('customers', 202, 'DUPLICATE_KEY'): 1, ('customers', 203, 'INVALID_FORMAT'): 1, ('products', 42, 'DUPLICATE_KEY'): 1, ('products', 43, 'INVALID_TYPE'): 1}"
+  }
+]

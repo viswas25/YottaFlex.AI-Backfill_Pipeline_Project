@@ -1,0 +1,67 @@
+{
+  "seed": 42,
+  "start": "2024-03-01",
+  "days": 7,
+  "orders_per_day": 120,
+  "customers": 200,
+  "products": 40,
+  "partitions": [
+    {
+      "partition": "2024-03-01",
+      "role": "normal",
+      "status": "SUCCEEDED",
+      "rows": 174,
+      "accepted": 161,
+      "rejected": 13
+    },
+    {
+      "partition": "2024-03-02",
+      "role": "empty",
+      "status": "SUCCEEDED",
+      "rows": 0,
+      "accepted": 0,
+      "rejected": 0
+    },
+    {
+      "partition": "2024-03-03",
+      "role": "normal",
+      "status": "SUCCEEDED",
+      "rows": 310,
+      "accepted": 288,
+      "rejected": 22
+    },
+    {
+      "partition": "2024-03-04",
+      "role": "extra_column",
+      "status": "SUCCEEDED",
+      "rows": 341,
+      "accepted": 316,
+      "rejected": 25
+    },
+    {
+      "partition": "2024-03-05",
+      "role": "no_optional_columns",
+      "status": "SUCCEEDED",
+      "rows": 306,
+      "accepted": 284,
+      "rejected": 22
+    },
+    {
+      "partition": "2024-03-06",
+      "role": "schema_drift",
+      "status": "FAILED",
+      "rows": 308,
+      "accepted": 0,
+      "rejected": 0
+    },
+    {
+      "partition": "2024-03-07",
+      "role": "normal",
+      "status": "SUCCEEDED",
+      "rows": 327,
+      "accepted": 303,
+      "rejected": 24
+    }
+  ],
+  "total_source_rows": 1766
+}

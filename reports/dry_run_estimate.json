@@ -1,0 +1,97 @@
+{
+  "mode": "dry-run (no writes)",
+  "partitions_requested": 7,
+  "would_run": 6,
+  "would_skip": 0,
+  "would_fail": 1,
+  "est_source_rows_to_process": 1458,
+  "total_source_bytes": 177782,
+  "assumed_throughput_rows_per_s": 12000.0,
+  "throughput_source": "default",
+  "workers": 3,
+  "est_cpu_seconds": 0.12,
+  "est_wall_seconds": 0.04,
+  "partitions": [
+    {
+      "partition": "2024-03-01",
+      "source_file": "data/sample/orders/dt=2024-03-01/orders.csv",
+      "bytes": 17680,
+      "est_rows": 174,
+      "action": "RUN",
+      "est_reject_rate": 0.0747,
+      "est_accepted": 161,
+      "est_seconds": 0.015,
+      "warnings": []
+    },
+    {
+      "partition": "2024-03-02",
+      "source_file": "data/sample/orders/dt=2024-03-02/orders.csv",
+      "bytes": 99,
+      "est_rows": 0,
+      "action": "RUN",
+      "est_reject_rate": 0.0,
+      "est_accepted": 0,
+      "est_seconds": 0.0,
+      "warnings": [
+        "EMPTY_BATCH: header only, no data rows"
+      ]
+    },
+    {
+      "partition": "2024-03-03",
+      "source_file": "data/sample/orders/dt=2024-03-03/orders.csv",
+      "bytes": 31357,
+      "est_rows": 310,
+      "action": "RUN",
+      "est_reject_rate": 0.071,
+      "est_accepted": 288,
+      "est_seconds": 0.026,
+      "warnings": []
+    },
+    {
+      "partition": "2024-03-04",
+      "source_file": "data/sample/orders/dt=2024-03-04/orders.csv",
+      "bytes": 35902,
+      "est_rows": 341,
+      "action": "RUN",
+      "est_reject_rate": 0.0733,
+      "est_accepted": 316,
+      "est_seconds": 0.028,
+      "warnings": [
+        "UNEXPECTED_COLUMNS ignored: ['promo_code']"
+      ]
+    },
+    {
+      "partition": "2024-03-05",
+      "source_file": "data/sample/orders/dt=2024-03-05/orders.csv",
+      "bytes": 28609,
+      "est_rows": 306,
+      "action": "RUN",
+      "est_reject_rate": 0.0719,
+      "est_accepted": 284,
+      "est_seconds": 0.025,
+      "warnings": [
+        "OPTIONAL_COLUMNS_ABSENT defaults applied: ['discount_pct', 'currency']"
+      ]
+    },
+    {
+      "partition": "2024-03-06",
+      "source_file": "data/sample/orders/dt=2024-03-06/orders.csv",
+      "bytes": 31058,
+      "est_rows": 308,
+      "action": "WOULD_FAIL",
+      "reason": "SCHEMA_ERROR: missing required column(s) ['quantity']; unexpected column(s) ['qty']",
+      "est_seconds": 0.0
+    },
+    {
+      "partition": "2024-03-07",
+      "source_file": "data/sample/orders/dt=2024-03-07/orders.csv",
+      "bytes": 33077,
+      "est_rows": 327,
+      "action": "RUN",
+      "est_reject_rate": 0.0734,
+      "est_accepted": 303,
+      "est_seconds": 0.027,
+      "warnings": []
+    }
+  ]
+}
